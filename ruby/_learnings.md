@@ -50,3 +50,49 @@ item    prior result
 
 sum: 8.0
 ```
+
+Code blocks
+-----------
+
+### Opening a file
+
+Code blocks let us write something like this.
+```
+File.open("foo.txt","w") { |f| f << "This is sexy" }
+```
+
+Instead of forcing us to write this:
+```
+file = File.open("foo.txt","w")
+file << "This is tedious"
+file.close
+```
+The code blocks help close the file after the write is done, much like Python.
+
+Hashes
+------
+### Default values
+A hash that creates an item that does not exist by default - using Code Blocks, and ruby magic
+```
+h = Hash.new { |hash, key| hash[key] = "Go Fish: #{key}" } #=> {}
+h["10"] #=> "Go fish: 10"
+```
+
+### Arrays
+Converting to array:
+```
+h = {"a" => 10, "b" => 20}
+h.flatten
+# => ["a", 10, "b", 20]
+h.values
+# => [10, 20]
+h.collect {|k, v| [k,v]}
+# => [["a", 10], ["b", 20]]
+```
+
+Converting array to Hash
+```
+a = [1,2,3,4,5]
+Hash[a.collect{|a| [a, a*2]}]
+# => {1=>2, 2=>4, 3=>6, 4=>8, 5=>10}
+```
