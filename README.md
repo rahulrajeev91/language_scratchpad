@@ -14,5 +14,7 @@ Language Learnings
  - Erlang
  - Closure
  - Haskel
+ - [Python]
 
 [Ruby]: https://github.com/rahulrajeev91/language_scratchpad/blob/master/ruby/_learnings.md
+[Python]: https://github.com/rahulrajeev91/language_scratchpad/blob/master/python/_learnings.md
