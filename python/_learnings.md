@@ -54,6 +54,8 @@ def append_to(element, to=None):
 
 Late Binding Closures
 ---------------------
+__NOTE__: Information taken from [python guide](http://docs.python-guide.org/en/latest/writing/gotchas/)
+
 Another common source of confusion is the way Python binds its variables in closures (or in the surrounding global scope).
 
 ### What You Wrote
